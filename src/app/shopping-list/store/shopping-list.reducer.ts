@@ -50,7 +50,7 @@ export function shoppingListReducer(
             return {
               ...state,
               ingredients: state.ingredients.filter((ing, ingIndex) => {
-                return ingIndex !== action.payload;
+                return ingIndex !== state.editedIngredientIndex;
               })
             };
             case ShoppingListActions.START_EDITING:
